@@ -60,6 +60,9 @@ class ViewController: UIViewController {
 
     private func updateNavigationBarUI() {
         navigationController?.navigationBar.barTintColor = .darkGray
-        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.tintColor = .white
+
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
 }
