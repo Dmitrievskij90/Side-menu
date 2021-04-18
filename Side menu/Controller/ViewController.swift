@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private var isMenuVisible = false
+
+    @IBOutlet weak var leadingViewConstraint: NSLayoutConstraint!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateNavigationBarUI()
     }
 
     @IBAction private func menuButtonTapped(_ sender: UIBarButtonItem) {
+        if isMenuVisible == false {
+            leadingViewConstraint.constant = view.bounds.width / 2
+            isMenuVisible = true
+        } else {
+            leadingViewConstraint.constant = 0
+            isMenuVisible = false
+        }
     }
 
     @IBAction private func settingsButtonTapped(_ sender: UIButton) {
@@ -21,7 +32,7 @@ class ViewController: UIViewController {
         guard let destinationVC = storyboard.instantiateInitialViewController() as? FirstViewController else {
             fatalError("Could not find FirstViewController")
         }
-//        destinationVC.modalPresentationStyle = .fullScreen
+        //        destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
 
@@ -30,7 +41,7 @@ class ViewController: UIViewController {
         guard let destinationVC = storyboard.instantiateInitialViewController() as? SecondViewController else {
             fatalError("Could not find SecondViewController")
         }
-//        destinationVC.modalPresentationStyle = .fullScreen
+        //        destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
 
@@ -39,7 +50,7 @@ class ViewController: UIViewController {
         guard let destinationVC = storyboard.instantiateInitialViewController() as? ThirdViewController else {
             fatalError("Could not find ThirdViewController")
         }
-//        destinationVC.modalPresentationStyle = .fullScreen
+        //        destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
 
