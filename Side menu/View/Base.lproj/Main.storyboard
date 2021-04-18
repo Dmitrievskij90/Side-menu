@@ -16,26 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaK-pO-Jmn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaK-pO-Jmn">
                                 <rect key="frame" x="15" y="131" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="Uuc-2R-dFk"/>
+                                    <constraint firstAttribute="height" constant="30" id="oZ9-5E-MeS"/>
+                                </constraints>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="settingsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0SL-xW-SiU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-Su-4Gp">
-                                <rect key="frame" x="21" y="205" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-Su-4Gp">
+                                <rect key="frame" x="15" y="204" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="cDD-tR-vWH"/>
+                                </constraints>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="profileButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w33-e2-68C"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-bW-anx">
-                                <rect key="frame" x="24" y="283" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Inbox"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-bW-anx">
+                                <rect key="frame" x="15" y="277" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WVe-KA-TKu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="deu-Y9-6MG"/>
+                                </constraints>
+                                <state key="normal" title="Inbox">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="inboxButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZmH-9a-bpX"/>
                                 </connections>
@@ -43,6 +57,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qaK-pO-Jmn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Lc-vn-1hw"/>
+                            <constraint firstItem="pGa-bW-anx" firstAttribute="top" secondItem="Sgl-Su-4Gp" secondAttribute="bottom" constant="43" id="5tn-c2-RoP"/>
+                            <constraint firstItem="Sgl-Su-4Gp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="97K-CA-gF9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pGa-bW-anx" secondAttribute="trailing" constant="342" id="Lwv-hM-bH5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sgl-Su-4Gp" secondAttribute="trailing" constant="342" id="dQb-Uk-mLy"/>
+                            <constraint firstItem="Sgl-Su-4Gp" firstAttribute="top" secondItem="qaK-pO-Jmn" secondAttribute="bottom" constant="43" id="j6v-H4-LQi"/>
+                            <constraint firstItem="pGa-bW-anx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tvU-7C-iQd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qaK-pO-Jmn" secondAttribute="trailing" constant="342" id="vEc-fN-23Z"/>
+                            <constraint firstItem="qaK-pO-Jmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="yc5-rL-jo3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Side menu" id="Fal-dq-5LY">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="sidebar.leading" catalog="system" id="bfN-OH-j1k">
