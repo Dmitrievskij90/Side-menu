@@ -25,6 +25,10 @@ class ViewController: UIViewController {
             leadingViewConstraint.constant = 0
             isMenuVisible = false
         }
+
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
     }
 
     @IBAction private func settingsButtonTapped(_ sender: UIButton) {
