@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateNavigationBarUI()
     }
 
     @IBAction private func menuButtonTapped(_ sender: UIBarButtonItem) {
@@ -41,5 +41,10 @@ class ViewController: UIViewController {
         }
 //        destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
+    }
+
+    private func updateNavigationBarUI() {
+        navigationController?.navigationBar.barTintColor = .darkGray
+        navigationController?.navigationBar.tintColor = .black
     }
 }
