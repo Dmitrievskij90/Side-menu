@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     private var isMenuVisible = false
 
     @IBOutlet weak var leadingViewConstraint: NSLayoutConstraint!

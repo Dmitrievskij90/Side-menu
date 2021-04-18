@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +14,30 @@
                     <view key="view" contentMode="scaleToFill" id="3Hz-3l-iCO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m4s-bH-xuA">
+                                <rect key="frame" x="82" y="388" width="250" height="120"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="993-L4-5la"/>
+                                    <constraint firstAttribute="width" constant="250" id="bZN-Gn-7KS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="U50-Fv-Hwd"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m4s-bH-xuA" firstAttribute="centerX" secondItem="3Hz-3l-iCO" secondAttribute="centerX" id="3ND-Ab-6IT"/>
+                            <constraint firstItem="m4s-bH-xuA" firstAttribute="centerY" secondItem="3Hz-3l-iCO" secondAttribute="centerY" id="FoC-TE-QyT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0Y-os-41b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="-96"/>
+            <point key="canvasLocation" x="128.98550724637681" y="-96.428571428571431"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
     </resources>
 </document>
